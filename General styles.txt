@@ -1,0 +1,15 @@
+*{
+
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  box-sizing: border-box;                                                           
+  font-family: Quicksand;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--black);
+  transition: all 0.20s ease-in-out;
+
+}

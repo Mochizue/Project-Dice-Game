@@ -1,0 +1,326 @@
+*{
+
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Space mono", serif;
+  box-sizing: border-box;
+  transition: all 0.20s ease-in-out;
+  list-style: none;
+  color: var(--white);
+
+}
+
+.flexer{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.flexer-column{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.content-res-container{
+
+  padding-right: 10rem;
+  padding-left: 10rem;
+
+}
+
+html::-webkit-scrollbar{
+
+  width: .5rem;
+
+}
+
+html::-webkit-scrollbar-track{
+
+  background-color: var(--red);
+
+}
+
+html::-webkit-scrollbar-thumb{
+
+  background-color: var(--white);
+  border-radius: 10px;
+
+}
+
+:root{
+
+  --white: #e8e8e8;
+  --black: #363636;
+  --gray: #787878;
+  --red: #df5441;
+  --yellow: #f0a967;
+  --standard-fz: 1rem;
+  --title-fz: 7rem;
+
+}
+
+html{
+
+  background-color: black;
+
+}
+
+.main-content-container{
+
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.99),rgba(0,0,0,0.69),rgba(0,0,0,0.39)),url(./images/background-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 2rem;
+
+}
+
+.fade-in{
+
+  opacity: 0;
+  transition: all 1s ease-in-out;
+
+}
+
+.show{
+
+  opacity: 1;
+
+}
+
+.content-wrapper{
+
+  height: auto;
+  padding: 7rem 0;
+
+}
+
+.content-wrapper h1{
+
+  font-size: var(--title-fz);
+  font-family: "Rampart One", serif;
+
+}
+
+.content-wrapper p{
+
+  text-align: end;
+
+}
+
+.dice-title{
+
+  animation-name: bounce;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+}
+
+.dice-content{
+
+  padding: 2.8rem;
+  width: 63.8%;
+  gap: 2rem;
+
+}
+
+.dice{
+
+  gap: 2rem;
+
+}
+
+.dice h1{
+
+  font-size: 2rem; 
+  font-family: "Space mono", serif;
+
+}
+
+.footer{
+
+  width: 63.8%;
+  gap: 1rem;
+
+}
+
+.footer a:hover{
+
+  color: var(--yellow);
+
+}
+
+.dice img{
+
+  width: 7rem;
+
+}
+
+.dice-rotater{
+
+  animation-name: rotater;
+  animation-duration: 0.5s;
+
+}
+
+.dice-container{
+
+  gap: 5rem;
+
+}
+
+.dice-roller h1{
+
+  font-size: 2rem;
+  text-align: center;
+
+}
+
+.dice-roller img{
+
+  width: 5rem;
+  position: relative;
+  animation-name: topper;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+
+}
+
+@keyframes rollDice {
+
+  0% { transform: rotateX(0); }
+  25% { transform: rotateY(90deg); }
+  50% { transform: rotateX(180deg); }
+  75% { transform: rotateY(270deg); }
+  100% { transform: rotateX(360deg); }
+  
+}
+
+.roller-animation {
+  animation: rollDice .1s infinite;
+}
+
+@keyframes bounce {
+  
+  0%{
+
+    transform: scale(100%);
+
+  }
+
+  50%{
+
+    transform: scale(105%);
+
+  }
+
+  100%{
+
+    transform: scale(100%);
+
+  }
+
+}
+
+@keyframes rotater {
+  
+  0%{
+
+    transform: rotateX(0deg);
+
+  }
+
+  50%{
+
+    transform: rotateX(180deg);
+
+  }
+
+  100%{
+
+    transform: rotateX(0deg);
+
+  }
+
+}
+
+@keyframes topper {
+
+  0%{
+
+    top: 0;
+
+  }
+
+  50%{
+
+    top: -10px;
+
+  }
+
+  100%{
+
+    top: 0;
+
+  }
+
+}
+
+@media(max-width: 1100px){
+
+  .dice-title p{
+
+    text-align: center;
+
+  }
+
+  .dice-title h1{
+
+    text-align: center;
+    font-size: 5rem;
+
+  }
+
+  .dice-content{
+
+    width: auto;
+
+  }
+
+  .footer{
+
+    width: 100%;
+
+  }
+
+  .footer{
+
+    flex-direction: column;
+
+  }
+
+}
+
+@media(max-width: 600px){
+
+  .dice h1{
+
+    font-size: 1.5rem; 
+  
+  }
+
+}
+
